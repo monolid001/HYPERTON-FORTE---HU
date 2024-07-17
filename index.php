@@ -1,3 +1,11 @@
+<?php
+    $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
+    $cms->landing( 1, 2 );
+
+    $cms->thankspage = DIR . './success/success.php';
+    define( 'THANKSPAGE', $_SERVER['DOCUMENT_ROOT'] . './success/success.php' );
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -13,10 +21,6 @@
 </head>
 
 <body class="ev-date timer-different">
-    <?php
-        $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
-        $cms->landing( 1, 2 );
-    ?>
     <section class="header">
         <div class="container">
             <h1 class="visually-hidden">HYPERTON FORTE</h1>
@@ -68,11 +72,11 @@
                         <div class="mainform--price price">
                             <div class="price__old">
                                 <p class="price__old--name">Régi ár</p>
-                                <p class="price__wrapper price__wrapper--old"><span class="x_price_previous">19800</span> <span class="x_currency">ft</span></p>
+                                <p class="price__wrapper price__wrapper--old"><span class="x_price_previous"><?=$cms->oldpr;?></span> <span class="x_currency">ft</span></p>
                             </div>
                             <div class="price__new">
                                 <p class="price__new--name">Új ár</p>
-                                <p class="price__wrapper price__wrapper--new"><span class="x_price_current">9900</span> <span class="x_currency">ft</span></p>
+                                <p class="price__wrapper price__wrapper--new"><span class="x_price_current"><?=$cms->price;?></span> <span class="x_currency">ft</span></p>
                             </div>
                         </div>
                         <form class="form x_order_form" action="getform.php" method="post">
@@ -257,9 +261,9 @@
                         <img class="action__prod" src="img/prod.png" alt="prod"></picture>
                     <div class="action__price pricei">
                         <div class="pricei__item pricei__item--old"><span class="pricei__title pricei__title--old">Régi ár</span>
-                            <div class="pricei__line"><span class="x_price_previous">19800</span><span class="current x_currency">ft</span></div>
+                            <div class="pricei__line"><span class="x_price_previous"><?=$cms->oldpr;?></span><span class="current x_currency">ft</span></div>
                         </div>
-                        <div class="pricei__item pricei__item--new"><span class="pricei__title pricei__title--new">Új ár</span><span class="x_price_current">9900</span><span class="current x_currency">ft</span></div>
+                        <div class="pricei__item pricei__item--new"><span class="pricei__title pricei__title--new">Új ár</span><span class="x_price_current"><?=$cms->price;?></span><span class="current x_currency">ft</span></div>
                     </div>
                     <div class="timer">
                         <p class="timer__text">Akció végéig <br> maradt:</p>
@@ -834,11 +838,11 @@
                         <div class="mainform--price price">
                             <div class="price__old">
                                 <p class="price__old--name">Régi ár</p>
-                                <p class="price__wrapper price__wrapper--old"><span class="x_price_previous">19800</span> <span class="x_currency">ft</span></p>
+                                <p class="price__wrapper price__wrapper--old"><span class="x_price_previous"><?=$cms->oldpr;?></span> <span class="x_currency">ft</span></p>
                             </div>
                             <div class="price__new">
                                 <p class="price__new--name">Új ár</p>
-                                <p class="price__wrapper price__wrapper--new"><span class="x_price_current">9900</span> <span class="x_currency">ft</span></p>
+                                <p class="price__wrapper price__wrapper--new"><span class="x_price_current"><?=$cms->price;?></span> <span class="x_currency">ft</span></p>
                             </div>
                         </div>
                         <form class="form x_order_form" action="getform.php" method="post">
@@ -892,11 +896,11 @@
                         <div class="mainform--price price">
                             <div class="price__old">
                                 <p class="price__old--name">Régi ár</p>
-                                <p class="price__wrapper price__wrapper--old"><span class="x_price_previous">19800</span> <span class="x_currency">ft</span></p>
+                                <p class="price__wrapper price__wrapper--old"><span class="x_price_previous"><?=$cms->oldpr;?></span> <span class="x_currency">ft</span></p>
                             </div>
                             <div class="price__new">
                                 <p class="price__new--name">Új ár</p>
-                                <p class="price__wrapper price__wrapper--new"><span class="x_price_current">9900</span> <span class="x_currency">ft</span></p>
+                                <p class="price__wrapper price__wrapper--new"><span class="x_price_current"><?=$cms->price;?></span> <span class="x_currency">ft</span></p>
                             </div>
                         </div>
                         <form class="form x_order_form" action="getform.php" method="post">
