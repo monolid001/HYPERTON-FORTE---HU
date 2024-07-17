@@ -9,9 +9,14 @@
     <title>HYPERTON FORTE megvásárlása olcsón. Árak, vélemények. HYPERTON FORTE megrendelése most!</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
+    <?php $cms->header(); ?>
 </head>
 
 <body class="ev-date timer-different">
+    <?php
+        $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
+        $cms->landing( 1, 2 );
+    ?>
     <section class="header">
         <div class="container">
             <h1 class="visually-hidden">HYPERTON FORTE</h1>
@@ -71,10 +76,13 @@
                             </div>
                         </div>
                         <form class="form x_order_form" action="getform.php" method="post">
+                            <?=$cms->params();?>
                             <div class="form__name"><input class="input" type="text" name="name" placeholder="Nevem" required></div>
                             <div class="form__phone">
                                 <input class="input" type="tel" name="phone" placeholder="Telefonszámom" required>
-                            </div><button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
+                            </div>
+                            <input type="hidden" name="country" value="<?=$cms->country;?>" />
+                            <button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
                         </form>
                         <div class="mainform--visiters">jelenleg az oldalon <span class="visiters">7</span> ember</div>
                         <div class="mainform--lastpak"><span class="lastpack">20</span> csomag maradt</div>
@@ -259,10 +267,13 @@
                     </div>
                 </div>
                 <form class="form x_order_form" action="getform.php" method="post">
+                    <?=$cms->params();?>
                     <div class="form__name"><input class="input" type="text" name="name" placeholder="Nevem" required></div>
                     <div class="form__phone">
                         <input class="input" type="tel" name="phone" placeholder="Telefonszámom" required>
-                    </div><button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
+                    </div>
+                    <input type="hidden" name="country" value="<?=$cms->country;?>" />
+                    <button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
                 </form>
             </div>
         </div>
@@ -423,10 +434,15 @@
                     </div>
                 </div>
                 <form class="form x_order_form" action="getform.php" method="post">
-                    <div class="form__name"><input class="input" type="text" name="name" placeholder="Nevem" required></div>
+                    <?=$cms->params();?>
+                    <div class="form__name">
+                        <input class="input" type="text" name="name" placeholder="Nevem" required>
+                    </div>
                     <div class="form__phone">
                         <input class="input" type="tel" name="phone" placeholder="Telefonszámom" required>
-                    </div><button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
+                    </div>
+                    <input type="hidden" name="country" value="<?=$cms->country;?>" />
+                    <button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
                 </form>
             </div>
         </div>
@@ -670,9 +686,11 @@
             <p class="reviews__help">Ön szedte a HYPERTON FORTE szert? <br>Segítsen másoknak meggyőződni hatékonyságáról.</p><button class="button reviews__btn toggle-form-btn">Visszajelzés hozzáadása</button>
             <div class="reviews__cta reviews-cta">
                 <form class="reviews__form reviews-form">
+                    <?=$cms->params();?>
                     <div class="reviews-form__row">
                         <div class="reviews-form__field-wrap reviews-form__field-wrap--name reviews-form__input-text">
                             <input class="reviews-form__input reviews-form__input-name reviews-form__field reviews-input reviews-input-text" type="text" placeholder="Neve">
+                            <input type="hidden" name="country" value="<?=$cms->country;?>" />
                             <span class="reviews-form__error">Használja a karaktereket a-tól z-ig</span>
                         </div>
                         <div class="feedback__rating">
@@ -765,10 +783,13 @@
                 <li class="order__item order__item--1"> <span class="order__item--number">1</span>
                     <div class="order__item--img">
                         <form class="form x_order_form" action="getform.php" method="post">
+                            <?=$cms->params();?>
                             <div class="form__name"><input class="input" type="text" name="name" placeholder="Nevem" required></div>
                             <div class="form__phone">
                                 <input class="input" type="tel" name="phone" placeholder="Telefonszámom" required>
-                            </div><button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
+                            </div>
+                            <input type="hidden" name="country" value="<?=$cms->country;?>" />
+                            <button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
                         </form>
                     </div>
                     <p class="order__item--text">Töltse ki az űrlapot<br> a weboldalon</p>
@@ -821,10 +842,13 @@
                             </div>
                         </div>
                         <form class="form x_order_form" action="getform.php" method="post">
+                            <?=$cms->params();?>
                             <div class="form__name"><input class="input" type="text" name="name" placeholder="Nevem" required></div>
                             <div class="form__phone">
                                 <input class="input" type="tel" name="phone" placeholder="Telefonszámom" required>
-                            </div><button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
+                            </div>
+                            <input type="hidden" name="country" value="<?=$cms->country;?>" />
+                            <button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
                         </form>
                         <div class="mainform--visiters">jelenleg az oldalon <span class="visiters">7</span> ember</div>
                         <div class="mainform--lastpak"><span class="lastpack">20</span> csomag maradt</div>
@@ -876,10 +900,14 @@
                             </div>
                         </div>
                         <form class="form x_order_form" action="getform.php" method="post">
-                            <div class="form__name"><input class="input" type="text" name="name" placeholder="Nevem" required></div>
+                            <?=$cms->params();?>
+                            <div class="form__name">
+                                <input class="input" type="text" name="name" placeholder="Nevem" required></div>
                             <div class="form__phone">
                                 <input class="input" type="tel" name="phone" placeholder="Telefonszámom" required>
-                            </div><button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
+                            </div>
+                            <input type="hidden" name="country" value="<?=$cms->country;?>" />
+                            <button type="submit" class="button form__button">Megrendelés <br><span>kedvezménnyel</span></button>
                         </form>
                         <div class="mainform--visiters">jelenleg az oldalon <span class="visiters">7</span> ember</div>
                         <div class="mainform--lastpak"><span class="lastpack">20</span> csomag maradt</div>
@@ -4743,6 +4771,7 @@
         $('[name="phone"]').attr('autocomplete', 'tel');
         $('[name="phone"]').attr('pattern', '.{6,18}')
     </script>
+    <?php $cms->footer(); ?>
 </body>
 
 </html>
